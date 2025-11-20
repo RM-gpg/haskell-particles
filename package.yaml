@@ -1,0 +1,58 @@
+name:                particles
+version:             0.1.0.0
+license:             BSD-3-Clause
+author:              "Robert Mascarenhas"
+maintainer:          "robwmascarenhas@gmail.com"
+copyright:           "2024 Robert Mascarenhas"
+
+extra-source-files:
+- README.md
+
+dependencies:
+- base >= 4.7 && < 5
+- gloss
+- tardis
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+- -Wno-orphans
+- -Wno-missing-export-lists
+- -Wno-type-defaults
+- -Wno-name-shadowing
+
+language: GHC2021
+
+default-extensions: LambdaCase
+
+library:
+  source-dirs: src
+  other-modules: []
+
+executable:
+  main:                Main.hs
+  source-dirs:         app
+  ghc-options:
+  - -threaded
+  - -rtsopts
+  - -with-rtsopts=-N
+  dependencies:
+  - particles
+  other-modules: []
+
+tests:
+  particles-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - particles
