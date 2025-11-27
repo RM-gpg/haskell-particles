@@ -4,7 +4,7 @@ A particle simulation system written in Haskell that allows you to interact with
 
 ## Features
 
-- **Drag Particles**: Clikc and drag particles to move them around the simulation.
+- **Drag Particles**: Click and drag particles to move them around the simulation.
 - **Adjust Coefficients of Restitution**: Change the elasticity of particles and walls to see how it affects the simulation.
 
 ## Requirements
